@@ -11,7 +11,7 @@ $(document).ready(function() {
 	// reset the layerlist-form
 	$('#layerlist')[0].reset();	
 	
-	$('input:checkbox:change_visibility').checkbox({
+	$('input.change_visibility:checkbox').checkbox({
 		cls: 'jquery-checkbox',  
 		empty: 'openlayers/images/empty.png'  
 	});
