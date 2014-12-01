@@ -55,6 +55,8 @@ class Proxy_Controller extends Controller {
 	 */
 	public function dorequest($data) {		
 
+		ini_set('memory_limit', '512M');
+
 		$headers   = array();
 		$vars      = $data->requestVars();
 		$no_header = false;

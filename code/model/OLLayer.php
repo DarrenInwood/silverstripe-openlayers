@@ -509,13 +509,13 @@ class OLLayer extends DataObject {
 			throw new OLLayer_Exception('Invalid featuretype name. This layer has not been initialized correctly.');
 		}
 
-		$requestString = "?";
+		$requestString = "";
 		if ($map) {
-			$requestString = "?map=".$map."&";
+			$requestString = "map=".$map."&";
 		}
 
 		// should this be configured from the cms?
-		$requestString .= "request=getfeature&service=WFS&version=1.0.0&typename=".$typename."&OUTPUTFORMAT=gml3&featureid=".$ogcFeatureId.$extraParams;
+		$requestString .= "request=GetFeature&service=WFS&version=1.0.0&typename=".$typename."&OUTPUTFORMAT=gml3&featureid=".$ogcFeatureId.$extraParams;
 
 		// Apply pagingation if required
 		if (isset($param['pageNum'])) {
