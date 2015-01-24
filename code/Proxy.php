@@ -83,7 +83,7 @@ class Proxy_Controller extends Controller {
 			$postvars = '';
 			$vars = $data->getBody();
 			if ($vars) {
-				$postvars = "body=".$vars;
+				$postvars = $vars;
 			} else {
 				$vars = $data->postVars();
 				if ($vars) {
